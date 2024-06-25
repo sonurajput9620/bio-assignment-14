@@ -1,0 +1,11 @@
+<div class="main">
+  <ng-container *ngFor="let item of chartsData">
+    <app-chart
+      [chartOption]="item.chartOption"
+      [heading]="item.heading"
+      [subHeading]="item.subHeading"
+      [popoverBodyData]="item.popoverBodyData"
+      [popoverChartOption]="item.popoverChartOption"
+    ></app-chart>
+  </ng-container>
+</div>
