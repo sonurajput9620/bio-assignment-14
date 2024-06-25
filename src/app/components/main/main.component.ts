@@ -39,7 +39,7 @@ export class MainComponent {
               width: 2,
             },
             itemStyle: {
-              color: 'green',
+              color: 'orange',
             },
           },
         ],
@@ -123,7 +123,7 @@ export class MainComponent {
               width: 2,
             },
             itemStyle: {
-              color: 'green',
+              color: 'white',
             },
           },
         ],
@@ -490,7 +490,7 @@ export class MainComponent {
               width: 2,
             },
             itemStyle: {
-              color: 'green',
+              color: 'blue',
             },
           },
         ],

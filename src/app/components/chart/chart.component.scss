@@ -8,6 +8,7 @@
 .popover-chart {
     height: 72px;
     width: 390px;
+    min-width: auto;
     border-radius: 14px;
     border: 6px solid #d1d1d1;
     margin-left: 20px;
@@ -54,6 +55,7 @@
     padding: 5px;
     border-radius: 5px 5px 0 0;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .instruction {
@@ -67,4 +69,5 @@
     color: rgb(30, 64, 255);
     font-weight: 600;
     padding: 5px;
+    cursor: pointer;
 }
