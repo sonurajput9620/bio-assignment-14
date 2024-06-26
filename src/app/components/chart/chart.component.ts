@@ -6,7 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { NgbPopover } from '@ng-bootstrap/ng-bootstrap';
-import { EChartsOption, ECElementEvent } from 'echarts';
+import { EChartsOption } from 'echarts';
 import * as echarts from 'echarts';
 import { PopoverBodyData } from '../../models/popover-body-data.modal';
 @Component({
@@ -32,7 +32,7 @@ export class ChartComponent implements AfterViewInit {
     echarts.init(this.chart.nativeElement, 'dark');
   }
 
-  public onclick(e: ECElementEvent | any, data: NgbPopover): void {
+  public onclick(e: any, data: NgbPopover): void {
     console.log(e);
 
     this.dot.nativeElement.style.top =

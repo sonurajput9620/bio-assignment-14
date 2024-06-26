@@ -30,7 +30,7 @@ export class MainComponent {
         },
         series: [
           {
-            data: [30, 30, 30, 30, 30, 30, 30],
+            data: [30, 25, 20, 15, 10, 25, 30],
             type: 'line',
             symbol: 'circle',
             symbolSize: 10,
@@ -114,7 +114,7 @@ export class MainComponent {
         },
         series: [
           {
-            data: [30, 30, 30, 30, 30, 30, 30],
+            data: [20, 30, 25, 30, 15, 10, 40],
             type: 'line',
             symbol: 'circle',
             symbolSize: 10,
@@ -198,7 +198,7 @@ export class MainComponent {
         },
         series: [
           {
-            data: [30, 30, 30, 30, 30, 30, 30],
+            data: [10, 15, 20, 25, 30, 35, 40],
             type: 'line',
             symbol: 'circle',
             symbolSize: 10,
@@ -282,7 +282,7 @@ export class MainComponent {
         },
         series: [
           {
-            data: [30, 30, 30, 30, 30, 30, 30],
+            data: [10, 30, 20, 15, 20, 20, 30],
             type: 'line',
             symbol: 'circle',
             symbolSize: 10,
@@ -450,7 +450,7 @@ export class MainComponent {
         },
         series: [
           {
-            data: [30, 30, 30, 30, 30, 30, 30],
+            data: [10, 20, 15, 20, 20, 10, 15],
             type: 'line',
             symbol: 'circle',
             symbolSize: 10,
