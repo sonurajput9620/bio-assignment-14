@@ -35,8 +35,14 @@ export class ChartComponent implements AfterViewInit {
   public onclick(e: ECElementEvent | any, data: NgbPopover): void {
     console.log(e);
 
-    this.dot.nativeElement.style.top = e.event?.event.clientY + 'px';
-    this.dot.nativeElement.style.left = e.event?.event.clientX + 'px';
+    this.dot.nativeElement.style.top =
+      (e.event?.event.type === 'touchend'
+        ? e.event?.event.changedTouches[0].pageY
+        : e.event?.event.clientY) + 'px';
+    this.dot.nativeElement.style.left =
+      (e.event?.event.type === 'touchend'
+        ? e.event?.event.changedTouches[0].pageX
+        : e.event?.event.clientX) + 'px';
     data.open();
   }
 
