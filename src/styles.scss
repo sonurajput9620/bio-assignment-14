@@ -1,28 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    background: rgb(22, 20, 34);
+  margin: 0;
+  padding: 0;
+  background: #122234;
+  color: white;
+  font-family: var(--bs-body-font-family);
+  line-height: 21px;
 }
 
 .popover {
-    --bs-popover-max-width: 600px !important;
-    border: 4px solid #ffc71f;
-    padding: 0;
+  --bs-popover-max-width: 600px !important;
+  border: 4px solid #ffc71f;
+  padding: 0;
 }
 
 .popover-body {
-    padding: 0 !important;
-    max-height: 80vh;
+  padding: 0 !important;
+  max-height: 80vh;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  color: #122234;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 680px) {
-    .popover {
-        --bs-popover-max-width: 90vw !important;
-    }
+  .popover {
+    --bs-popover-max-width: 90vw !important;
+  }
 }

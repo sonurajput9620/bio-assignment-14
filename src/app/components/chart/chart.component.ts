@@ -2,13 +2,14 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   Input,
   ViewChild,
 } from '@angular/core';
 import { NgbPopover } from '@ng-bootstrap/ng-bootstrap';
 import { EChartsOption } from 'echarts';
-import * as echarts from 'echarts';
 import { PopoverBodyData } from '../../models/popover-body-data.modal';
+import { ECharts } from 'echarts/core';
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -22,14 +23,29 @@ export class ChartComponent implements AfterViewInit {
 
   @Input() public heading!: string;
 
+  @Input() public title!: string;
+
   @Input() public subHeading!: string;
 
   @Input() public popoverChartOption!: EChartsOption;
 
   @Input() public popoverBodyData!: PopoverBodyData[];
 
+  echartsInstance: ECharts | undefined;
+
   ngAfterViewInit(): void {
-    echarts.init(this.chart.nativeElement, 'dark');
+    window.dispatchEvent(new Event('resize'));
+  }
+
+  onChartInit(ec: ECharts) {
+    this.echartsInstance = ec;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    if (this.echartsInstance) {
+      this.echartsInstance.resize();
+    }
   }
 
   public onclick(e: any, data: NgbPopover): void {

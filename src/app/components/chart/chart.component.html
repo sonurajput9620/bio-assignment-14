@@ -1,10 +1,13 @@
-<div
-  echarts
-  #chart
-  [options]="chartOption"
-  (chartClick)="onclick($event, popover)"
-  class="demo-chart"
-></div>
+<div class="demo-chart">
+  <p class="chart-title">{{ title }}</p>
+  <div
+    echarts
+    #chart
+    [options]="chartOption"
+    (chartClick)="onclick($event, popover)"
+    class="chart"
+  ></div>
+</div>
 
 <div
   #dot

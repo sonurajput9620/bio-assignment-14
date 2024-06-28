@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Chart } from '../../models/chart-data.model';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 @Component({
   selector: 'app-main',
@@ -7,15 +10,46 @@ import { Chart } from '../../models/chart-data.model';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent {
+  public navShow = false;
+
+  chartOption: any = {
+    xAxis: {
+      type: 'category',
+      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      show: false,
+    },
+    yAxis: {
+      type: 'value',
+      splitLine: {
+        show: false,
+      },
+      show: false,
+      boundaryGap: [0, '1'],
+    },
+    series: [
+      {
+        data: [30, 25, 20, 25, 30, 25, 20],
+        type: 'line',
+        symbol: 'circle',
+        symbolSize: 10,
+        lineStyle: {
+          color: '#d1cbcb',
+          width: 2,
+        },
+        itemStyle: {
+          color: 'green',
+        },
+      },
+    ],
+  };
+
   public chartsData: Chart[] = [
     {
       heading: 'DAF (1C)',
       subHeading:
         'Module Score - is the avarage of all parameter scores shown below.',
+      title: 'DAF (1C)',
       chartOption: {
-        title: {
-          text: 'DAF (1C)',
-        },
         xAxis: {
           type: 'category',
           data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -96,10 +130,9 @@ export class MainComponent {
       heading: 'DAF (1C)',
       subHeading:
         'Module Score - is the avarage of all parameter scores shown below.',
+      title: 'Area Chart',
+
       chartOption: {
-        title: {
-          text: 'Area Chart',
-        },
         xAxis: {
           type: 'category',
           data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -180,10 +213,8 @@ export class MainComponent {
       heading: 'DAF (1C)',
       subHeading:
         'Module Score - is the avarage of all parameter scores shown below.',
+      title: 'Global Chart',
       chartOption: {
-        title: {
-          text: 'Global Chart',
-        },
         xAxis: {
           type: 'category',
           data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -264,10 +295,8 @@ export class MainComponent {
       heading: 'DAF (1C)',
       subHeading:
         'Module Score - is the avarage of all parameter scores shown below.',
+      title: 'Stacked Chart',
       chartOption: {
-        title: {
-          text: 'Stacked Chart',
-        },
         xAxis: {
           type: 'category',
           data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -348,10 +377,8 @@ export class MainComponent {
       heading: 'DAF (1C)',
       subHeading:
         'Module Score - is the avarage of all parameter scores shown below.',
+      title: 'Area Chart',
       chartOption: {
-        title: {
-          text: 'Area Chart',
-        },
         xAxis: {
           type: 'category',
           data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -432,10 +459,8 @@ export class MainComponent {
       heading: 'DAF (1C)',
       subHeading:
         'Module Score - is the avarage of all parameter scores shown below.',
+      title: 'Stacked A',
       chartOption: {
-        title: {
-          text: 'Stacked Area Chart',
-        },
         xAxis: {
           type: 'category',
           data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],

@@ -7,4 +7,5 @@ export interface Chart {
   chartOption: EChartsOption;
   popoverChartOption: EChartsOption;
   popoverBodyData: PopoverBodyData[];
+  title: string;
 }
