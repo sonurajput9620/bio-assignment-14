@@ -1,0 +1,76 @@
+<div>
+  <header class="d-flex justify-content-between">
+    <div class="header-number">
+      <h1 class="text-center">6</h1>
+    </div>
+    <div class="header-text">
+      <strong>{{ heading }}</strong>
+      <div>{{ subHeading }}</div>
+    </div>
+    <div class="d-flex align-items-center" style="margin-right: 20px">
+      <button type="button" class="btn-close" (click)="close()"></button>
+    </div>
+  </header>
+  <hr class="p-0 m-0" />
+
+  <section>
+    <ng-container
+      *ngFor="let item of popoverBodyData; let i = index; let isLast = last"
+    >
+      <div class="popover-body-container">
+        <div class="d-flex">
+          <div class="d-flex flex-column w-100">
+            <div class="d-flex justify-content-between flex-wrap">
+              <div class="d-flex align-items-center" style="padding-left: 20px">
+                <h3
+                  class="avatar-circle d-flex justify-content-center align-items-center"
+                >
+                  {{ item.numberOfData }}
+                </h3>
+                <div style="margin-left: 40px">
+                  <h3>{{ item.heading }}</h3>
+                  <div class="text-secondary">{{ item.subHeading }}</div>
+                </div>
+              </div>
+              <div
+                echarts
+                [options]="popoverChartOption"
+                class="popover-chart"
+              ></div>
+            </div>
+            <ngb-accordion #a="ngbAccordion">
+              <ngb-panel>
+                <ng-template ngbPanelHeader>
+                  <div class="accordion-button custom-header">
+                    <button ngbPanelToggle class="accodian-btn">
+                      <h4 ngbPanelToggle class="title" style="font-size: 18px">
+                        View Instruction
+                      </h4>
+                    </button>
+                  </div>
+                </ng-template>
+                <ng-template ngbPanelContent>
+                  <p>
+                    1. Increase aeration to enhance microbial activity.<br />
+                    2. Optimize pH levels for bacterial growth.<br />
+                    3. Improve mixing for better substrate utilization.<br />
+                    4. Increase sludge retention time.<br />
+                    5. Implement bioaugmentation for microbial diversity.
+                  </p>
+
+                  <a class="ReadModel31" (click)="openReadMore()"
+                    >Read More &gt;&gt;</a
+                  >
+                </ng-template>
+              </ngb-panel>
+            </ngb-accordion>
+          </div>
+        </div>
+        <div *ngIf="item.showInstructions" class="instruction">
+          {{ item.instruction }}
+        </div>
+        <hr *ngIf="!isLast" />
+      </div>
+    </ng-container>
+  </section>
+</div>

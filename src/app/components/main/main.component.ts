@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Chart } from '../../models/chart-data.model';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { ModalService } from 'src/app/shared/service/modal.service';
+import { GraphViewModalComponent } from 'src/app/components/graph-view-modal/graph-view-modal.component';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 

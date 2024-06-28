@@ -47,3 +47,28 @@ body {
     --bs-popover-max-width: 90vw !important;
   }
 }
+
+.custom-header::after {
+  content: none;
+}
+
+.accordion-item {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.accordion-button {
+  padding-bottom: 0 !important;
+}
+.accordion {
+  border: none !important;
+}
+
+.accordion-body {
+  padding: 0 0 0 24px !important;
+}

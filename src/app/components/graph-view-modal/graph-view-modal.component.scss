@@ -1,0 +1,108 @@
+.popover-chart {
+  height: 100px;
+  width: 390px;
+  min-width: auto;
+  border-radius: 14px;
+  border: 6px solid #d1d1d1;
+  margin-left: 20px;
+}
+
+.data-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  position: absolute;
+  display: flex;
+}
+
+.header-number {
+  width: 60px;
+  background-color: #ff0000a1;
+  border-radius: 8px 0;
+}
+
+.header-text {
+  padding: 6px 15px;
+  width: 100%;
+}
+
+.avatar-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(255, 205, 205);
+  color: rgb(233, 52, 52);
+  text-align: center;
+  line-height: 40px;
+}
+
+.popover-body-container {
+  padding: 10px;
+}
+
+.instruction-container {
+  background-color: rgb(141, 196, 225);
+  color: rgb(30, 64, 255);
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.instruction {
+  background-color: rgb(141, 196, 225);
+  padding: 5px;
+  border-radius: 0 5px 5px 5px;
+  font-weight: 600;
+}
+
+.view-instruction {
+  color: rgb(30, 64, 255);
+  font-weight: 600;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.chart-title {
+  text-align: left;
+  padding-left: 5px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.45;
+}
+
+.custom-header::after {
+  content: none;
+}
+
+.accodian-btn {
+  background: transparent;
+  border: none !important;
+  outline: none !important;
+
+  &:hover {
+    border: none !important;
+    outline: none !important;
+  }
+
+  &:focus {
+    border: none !important;
+    outline: none !important;
+  }
+
+  h4 {
+    color: #6d96e4 !important;
+    line-height: 1.33;
+    font-weight: 600;
+    position: relative;
+    padding-right: 30px;
+    cursor: pointer;
+  }
+}
+
+.ReadModel31 {
+  text-decoration: none;
+  color: var(--sala-primary-dark, #111111);
+  cursor: pointer;
+}

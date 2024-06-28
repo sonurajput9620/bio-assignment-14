@@ -8,9 +8,18 @@ import { MainComponent } from './components/main/main.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { ChartComponent } from './components/chart/chart.component';
 import { SwiperModule } from 'swiper/angular';
+import { GraphViewModalComponent } from './components/graph-view-modal/graph-view-modal.component';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReadMoreModalComponent } from './components/read-more-modal/read-more-modal.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, ChartComponent],
+  declarations: [
+    AppComponent,
+    MainComponent,
+    ChartComponent,
+    GraphViewModalComponent,
+    ReadMoreModalComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,6 +33,7 @@ import { SwiperModule } from 'swiper/angular';
       echarts: () => import('echarts'), // or import('./path-to-my-custom-echarts')
     }),
     SwiperModule,
+    NgbAccordionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

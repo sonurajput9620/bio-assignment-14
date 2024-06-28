@@ -10,6 +10,8 @@ import { NgbPopover } from '@ng-bootstrap/ng-bootstrap';
 import { EChartsOption } from 'echarts';
 import { PopoverBodyData } from '../../models/popover-body-data.modal';
 import { ECharts } from 'echarts/core';
+import { ModalService } from 'src/app/shared/service/modal.service';
+import { GraphViewModalComponent } from '../graph-view-modal/graph-view-modal.component';
 @Component({
   selector: 'app-chart',
   templateUrl: './chart.component.html',
@@ -33,6 +35,8 @@ export class ChartComponent implements AfterViewInit {
 
   echartsInstance: ECharts | undefined;
 
+  constructor(private modalSvc: ModalService) {}
+
   ngAfterViewInit(): void {
     window.dispatchEvent(new Event('resize'));
   }
@@ -49,17 +53,29 @@ export class ChartComponent implements AfterViewInit {
   }
 
   public onclick(e: any, data: NgbPopover): void {
-    console.log(e);
+    this.modalSvc.open(GraphViewModalComponent, {
+      data: {
+        titleText: 'AdvancedSearch',
+        confirmButtonText: 'Search',
+        cancelButtonText: 'Reset',
+      },
+      options: {
+        size: 'lg',
+        centered: true,
+      },
+    });
 
-    this.dot.nativeElement.style.top =
-      (e.event?.event.type === 'touchend'
-        ? e.event?.event.changedTouches[0].pageY
-        : e.event?.event.clientY) + 'px';
-    this.dot.nativeElement.style.left =
-      (e.event?.event.type === 'touchend'
-        ? e.event?.event.changedTouches[0].pageX
-        : e.event?.event.clientX) + 'px';
-    data.open();
+    //This code sis for popover
+
+    // this.dot.nativeElement.style.top =
+    //   (e.event?.event.type === 'touchend'
+    //     ? e.event?.event.changedTouches[0].pageY
+    //     : e.event?.event.clientY) + 'px';
+    // this.dot.nativeElement.style.left =
+    //   (e.event?.event.type === 'touchend'
+    //     ? e.event?.event.changedTouches[0].pageX
+    //     : e.event?.event.clientX) + 'px';
+    // data.open();
   }
 
   public toggleInstruction(index: number): void {
