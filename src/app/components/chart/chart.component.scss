@@ -9,7 +9,7 @@
 
 .chart {
   height: 180px;
-  width: calc((100rem / 6) - 90px);
+  min-width: calc((100rem / 6) - 85px);
 }
 
 .popover-chart {
