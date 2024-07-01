@@ -1,0 +1,60 @@
+.alertTitle {
+    color: white;
+    padding-bottom: 6px;
+    font-weight: 600;
+}
+
+.AlertsBox {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    text-align: center;
+    padding-top: 3px;
+    background-color: #06152b;
+    box-shadow: 0px 0px 5px 0px #000000;
+}
+
+.AlertsBox .light-theme-bg {
+    background-color: #06152b !important;
+    color: #fff !important;
+    font-family: Open Sans, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    height: 80px;
+    text-transform: capitalize;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.AlertsBox table thead>tr>th {
+    padding: 8px 12px;
+    border: 0;
+    font-weight: 700;
+    background-color: #06152b !important;
+}
+
+.AlertsBox .AlertsBody {
+    display: block;
+    max-height: 500px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.AlertsBox table tbody>tr:nth-child(odd) {
+    background-color: #122744 !important;
+}
+
+tr {
+    text-align: left;
+    margin: 10px 0;
+    vertical-align: baseline;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    font-size: 14px;
+    padding: 5px 20px;
+    color: white;
+}

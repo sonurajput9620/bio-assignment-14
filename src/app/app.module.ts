@@ -11,6 +11,8 @@ import { SwiperModule } from 'swiper/angular';
 import { GraphViewModalComponent } from './components/graph-view-modal/graph-view-modal.component';
 import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReadMoreModalComponent } from './components/read-more-modal/read-more-modal.component';
+import { HeaderComponent } from './components/header/header.component';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ReadMoreModalComponent } from './components/read-more-modal/read-more-m
     ChartComponent,
     GraphViewModalComponent,
     ReadMoreModalComponent,
+    HeaderComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
